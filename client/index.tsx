@@ -16,11 +16,12 @@ root.render(
    *
    * TODO: replace the empty strings below with your own domain, clientId, and audience
    */
+ 
   <Auth0Provider
-    domain=""
-    clientId=""
+    domain={import.meta.env.REACT_APP_AUTH0_DOMAIN}
+    clientId={import.meta.env.REACT_APP_AUTH0_CLIENT_ID}
     redirectUri={window.location.origin}
-    audience=""
+    audience={import.meta.env.REACT_APP_AUTH0_AUDIENCE}
   >
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
